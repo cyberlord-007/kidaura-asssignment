@@ -7,13 +7,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<bool> isDeleted = [false, false, false, false, false];
+  List<bool> isDeleted = [false, false, false, false, false, false, false];
   List<Color> color = [
     Colors.purpleAccent,
     Colors.indigoAccent,
     Colors.blueAccent,
     Colors.greenAccent,
-    Colors.yellowAccent
+    Colors.yellowAccent,
+    Colors.deepOrangeAccent,
+    Colors.redAccent
   ];
 
   void deleteItem(int index) {
@@ -34,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               : ListItem(
                   deleteItem: deleteItem, index: index, color: color[index]);
         },
-        itemCount: 5,
+        itemCount: 7,
       ),
     );
   }
